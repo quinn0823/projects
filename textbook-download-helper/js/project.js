@@ -11,12 +11,6 @@ function output() {
             alert("The URL must include \"contentId\"!");
         }
     } else {
-        document.getElementById('url_o_en').href = "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/" + getQueryString("contentId") + ".pkg/pdf.pdf";
-
-        document.getElementById('url_o_en').innerText = "Click here to download.";
-        
-        document.getElementById('url_o_cns').href = "https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/" + getQueryString("contentId") + ".pkg/pdf.pdf";
-
-        document.getElementById('url_o_cns').innerText = "单击以下载.";
+        window.open("https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/" + getQueryString("contentId") + ".pkg/pdf.pdf");
     }
 }
