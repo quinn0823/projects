@@ -5,11 +5,7 @@ function getQueryString(name) {
 }
 function output() {
     if(document.getElementById("url_i").value.indexOf("contentId") == -1) {
-        if(localStorage.langdate == 2) {
-            alert("URL必须包含 \"contentId\"!");
-        } else {
-            alert("The URL must include \"contentId\"!");
-        }
+        alert("The URL must include \"contentId\"!");
     } else {
         window.open("https://r1-ndr.ykt.cbern.com.cn/edu_product/esp/assets_document/" + getQueryString("contentId") + ".pkg/pdf.pdf");
     }
