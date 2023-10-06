@@ -16,7 +16,7 @@ select.options[11].selected = true;
 /* 打招呼 */
 var greetOut = "<p>👋 你好！我是 Quinn0823，很高兴能帮助你。</p>";
 /* 版权声明 */
-var copyrightOut = "<p>由 <a href='https://quinn0823.github.io/'>Quinn0823</a> 书写。版权所有。</p>";
+var copyrightOut = "<p><br>由 <a href='https://quinn0823.github.io/'>Quinn0823</a> 书写。版权所有。</p>";
 /* 步骤 */
 document.getElementById("stepOut").innerHTML = "<br><p>尝试以下操作步骤：<p>";
 
@@ -39,7 +39,7 @@ function typeChange() {
 
 probChange();
 function probChange() {
-    var probOut = "<p>根据你的描述，我了解到你在 " + type + " 方面遇到了“" + document.getElementById("probIn").value + "”的问题。针对此情况，你可以：</p>";
+    var probOut = "<br><p>根据你的描述，我了解到你在 " + type + " 方面遇到了“" + document.getElementById("probIn").value + "”的问题。针对此情况，你可以：</p>";
     document.getElementById("probOut").innerHTML = probOut;
 }
 
@@ -81,12 +81,13 @@ function docuSet() {
 }
 
 
-function add() {
+function stepAdd() {
     var stepIn = document.getElementById("stepIn").value;
     var li = document.createElement("li");
     stepList.appendChild(li);
     li.innerText = stepIn;
     li.setAttribute("class", "step" + (i++));
+    document.getElementById("stepIn").value = "";
     li.onmouseover = function () {
         this.style.backgroundColor = "#ff0000";
         this.style.color = "#fff";
