@@ -28,7 +28,7 @@
     <div id="header"></div>
     <h3>信息</h3>
     <p>支持类型：
-        <select id="type" onchange="typeChange()">
+        <select id="type" onchange="typeChange();probChange()">
             <option>AirTag</option>
             <option>App Store</option>
             <option>Apple ID</option>
@@ -53,7 +53,7 @@
         </select>
     </p>
     <p>问题：
-        <input type="text" id="probIn" onchange="contChange()">
+        <input type="text" id="probIn" onchange="probChange()">
     </p>
     <hr>
     <h3>内容</h3>
