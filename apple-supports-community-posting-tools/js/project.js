@@ -2,13 +2,6 @@ var select = document.getElementById("type");
 var choose;
 var type
 
-
-/* --- 步骤列表 --- */
-var i = 0;
-var stepOut = document.getElementById("stepOut");
-var stepList = document.createElement("ol");
-stepOut.appendChild(stepList);
-
 /* --- 显示与隐藏 --- */
 document.getElementById("stepHide").style.display = "none";
 document.getElementById("stepOut").style.display = "none";
@@ -24,6 +17,14 @@ select.options[11].selected = true;
 var greetOut = "<p>👋 你好！我是 Quinn0823，很高兴能帮助你。</p>";
 /* 版权声明 */
 var copyrightOut = "<p>由 <a href='https://quinn0823.github.io/'>Quinn0823</a> 书写。版权所有。</p>";
+/* 步骤 */
+document.getElementById("stepOut").innerHTML = "<br><p>尝试以下操作步骤：<p>";
+
+/* --- 步骤列表 --- */
+var i = 0;
+var stepOut = document.getElementById("stepOut");
+var stepList = document.createElement("ol");
+stepOut.appendChild(stepList);
 
 document.getElementById("greetOut").innerHTML = greetOut;
 document.getElementById("copyrightOut").innerHTML = copyrightOut;
@@ -32,7 +33,7 @@ typeChange();
 function typeChange() {
     choose = select.selectedIndex;
     type = select.options[choose].text;
-    var endingOut = "<p>以上是我竭尽所能为你提供的帮助。如果以上帮助没能很好地解决你的问题，联系 Apple 支持获得或许也是个不错的方法。获取更多支持，你只需要点击以下链接，并选择“" + type + "”：<a href='https://getsupport.apple.com/products'>Apple Support</a>。</p>";
+    var endingOut = "<br><p>以上是我竭尽所能为你提供的帮助。如果以上帮助没能很好地解决你的问题，联系 Apple 支持获得或许也是个不错的方法。获取更多支持，你只需要点击以下链接，并选择“" + type + "”：<a href='https://getsupport.apple.com/products'>Apple Support</a>。</p>";
     document.getElementById("endingOut").innerHTML = endingOut;
 }
 
@@ -74,7 +75,7 @@ function docuSet() {
         if(docuText == "") {
             docuText = docuUrl;
         }
-        var docuOut = "<ul><li>参考以下技术文档：<a href='" + docuText + "'>" + docuUrl + "</a></li></ul>";
+        var docuOut = "<br><p>参考以下技术文档：<a href='" + docuText + "'>" + docuUrl + "</a></p>";
         document.getElementById("docuOut").innerHTML = docuOut;
     }
 }
@@ -87,9 +88,11 @@ function add() {
     li.innerText = stepIn;
     li.setAttribute("class", "step" + (i++));
     li.onmouseover = function () {
-        this.style.color = "red";
+        this.style.backgroundColor = "#ff0000";
+        this.style.color = "#fff";
     }
     li.onmouseout = function () {
+        this.style.backgroundColor = "";
         this.style.color = "";
     }
     li.onclick = function () {
