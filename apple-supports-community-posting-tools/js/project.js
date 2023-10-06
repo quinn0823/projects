@@ -10,13 +10,11 @@ document.getElementById("docuHide").style.display = "none";
 document.getElementById("docuOut").style.display = "none";
 
 /* --- 默认选中 iPhone --- */
-select.options[11].selected = true;
+select.options[2].selected = true;
 
 /* --- 默认文本 --- */
-/* 打招呼 */
-var greetOut = "<p>你好！</p>";
 /* 版权声明 */
-var copyrightOut = "<p><br>由 <a href='https://quinn0823.github.io/'>Quinn0823</a> 书写。</p>";
+var copyrightOut = "<p><br>由 Quinn0823 书写。</p>";
 /* 步骤 */
 document.getElementById("stepOut").innerHTML = "<br><p>尝试以下操作步骤：<p>";
 
@@ -26,20 +24,19 @@ var stepOut = document.getElementById("stepOut");
 var stepList = document.createElement("ol");
 stepOut.appendChild(stepList);
 
-document.getElementById("greetOut").innerHTML = greetOut;
 document.getElementById("copyrightOut").innerHTML = copyrightOut;
 
 typeChange();
 function typeChange() {
     choose = select.selectedIndex;
     type = select.options[choose].text;
-    var endingOut = "<br><p>如果以上帮助没能很好地解决你的问题，联系 Apple 支持获得或许也是个不错的方法。获取更多支持，你只需要点击以下链接，并选择“" + type + "”：<a href='https://getsupport.apple.com/products'>Apple Support</a>。</p>";
+    var endingOut = "<br><p>如果以上没能很好地解决你的问题，你可以联系 Apple 支持以获取更多支持。只需要点击以下链接，并选择“" + type + "”：<a href='https://getsupport.apple.com/products'>Apple Support</a>。</p>";
     document.getElementById("endingOut").innerHTML = endingOut;
 }
 
 probChange();
 function probChange() {
-    var probOut = "<br><p>针对你在 " + type + " 上遇到的“" + document.getElementById("probIn").value + "”的问题，你可以：</p>";
+    var probOut = "<p>针对你在 " + type + " 上遇到的“" + document.getElementById("probIn").value + "”的问题，你可以：</p>";
     document.getElementById("probOut").innerHTML = probOut;
 }
 
