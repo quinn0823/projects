@@ -1,5 +1,6 @@
 var select = document.getElementById("type");
 var choose;
+var type
 
 
 /* --- 步骤列表 --- */
@@ -28,18 +29,19 @@ document.getElementById("greetOut").innerHTML = greetOut;
 document.getElementById("copyrightOut").innerHTML = copyrightOut;
 
 typeChange();
+function typeChange() {
+    choose = select.selectedIndex;
+    type = select.options[choose].text;
+    var endingOut = "<p>以上是我竭尽所能为你提供的帮助。如果以上帮助没能很好地解决你的问题，联系 Apple 支持获得或许也是个不错的方法。获取更多支持，你只需要点击以下链接，并选择“" + type + "”：<a href='https://getsupport.apple.com/products'>Apple Support</a>。</p>";
+    document.getElementById("endingOut").innerHTML = endingOut;
+}
 
 probChange();
 function probChange() {
-    var probOut = "<p>根据你的描述，我了解到你在 " + select.options[choose].text + " 方面遇到了“" + document.getElementById("probIn").value + "”的问题。针对此情况，你可以：</p>";
+    var probOut = "<p>根据你的描述，我了解到你在 " + type + " 方面遇到了“" + document.getElementById("probIn").value + "”的问题。针对此情况，你可以：</p>";
     document.getElementById("probOut").innerHTML = probOut;
 }
 
-function typeChange() {
-    choose = select.selectedIndex;
-    var endingOut = "<p>以上是我竭尽所能为你提供的帮助。如果以上帮助没能很好地解决你的问题，联系 Apple 支持获得或许也是个不错的方法。获取更多支持，你只需要点击以下链接，并选择“" + select.options[choose].text + "”：<a href='https://getsupport.apple.com/products'>Apple Support</a>。</p>";
-    document.getElementById("endingOut").innerHTML = endingOut;
-}
 
 function contChange() {
     if(document.getElementById("step").checked == true) {
