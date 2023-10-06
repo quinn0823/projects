@@ -59,7 +59,7 @@
     <h3>内容</h3>
     <label><input type="checkbox" id="step" onchange="contChange()">操作步骤</label>
     <div id="stepHide">
-        <input id="stepIn"><button onclick="add()">新增行</button><button onclick="remove()">删除行</button>
+        <input id="stepIn"><button onclick="stepAdd()">新增行</button>
     </div>
     <br>
     <label><input type="checkbox" id="docu" name="cont" onchange="contChange()">技术文档</label>
@@ -74,9 +74,9 @@
         <div id="greetOut"></div>
         <div id="probOut"></div>
         <div id="solutionOut">
-            <div id="docuOut">
-            </div>
             <div id="stepOut">
+            </div>
+            <div id="docuOut">
             </div>
         </div>
         <div id="endingOut"></div>
