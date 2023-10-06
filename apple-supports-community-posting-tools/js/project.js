@@ -14,9 +14,9 @@ select.options[11].selected = true;
 
 /* --- 默认文本 --- */
 /* 打招呼 */
-var greetOut = "<p>👋 你好！我是 Quinn0823，很高兴能帮助你。</p>";
+var greetOut = "<p>你好！</p>";
 /* 版权声明 */
-var copyrightOut = "<p><br>由 <a href='https://quinn0823.github.io/'>Quinn0823</a> 书写。版权所有。</p>";
+var copyrightOut = "<p><br>由 <a href='https://quinn0823.github.io/'>Quinn0823</a> 书写。</p>";
 /* 步骤 */
 document.getElementById("stepOut").innerHTML = "<br><p>尝试以下操作步骤：<p>";
 
@@ -33,13 +33,13 @@ typeChange();
 function typeChange() {
     choose = select.selectedIndex;
     type = select.options[choose].text;
-    var endingOut = "<br><p>以上是我竭尽所能为你提供的帮助。如果以上帮助没能很好地解决你的问题，联系 Apple 支持获得或许也是个不错的方法。获取更多支持，你只需要点击以下链接，并选择“" + type + "”：<a href='https://getsupport.apple.com/products'>Apple Support</a>。</p>";
+    var endingOut = "<br><p>如果以上帮助没能很好地解决你的问题，联系 Apple 支持获得或许也是个不错的方法。获取更多支持，你只需要点击以下链接，并选择“" + type + "”：<a href='https://getsupport.apple.com/products'>Apple Support</a>。</p>";
     document.getElementById("endingOut").innerHTML = endingOut;
 }
 
 probChange();
 function probChange() {
-    var probOut = "<br><p>根据你的描述，我了解到你在 " + type + " 方面遇到了“" + document.getElementById("probIn").value + "”的问题。针对此情况，你可以：</p>";
+    var probOut = "<br><p>针对你在 " + type + " 上遇到的“" + document.getElementById("probIn").value + "”的问题，你可以：</p>";
     document.getElementById("probOut").innerHTML = probOut;
 }
 
