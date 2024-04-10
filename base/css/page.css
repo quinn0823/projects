@@ -46,7 +46,7 @@ p, li {
 p {
     text-indent: 20px;
 }
-p.copyright {
+p.footer {
     text-align: center;
     color: #6699cc;
 }
