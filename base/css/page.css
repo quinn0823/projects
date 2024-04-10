@@ -122,6 +122,7 @@ hr {
 
 /* --- 隐藏菜单 --- */
 details {
+    margin-left: 20px;
     margin-top: 5px;
     padding: 5px;
     border-radius: 18px;
