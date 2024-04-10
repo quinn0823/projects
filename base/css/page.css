@@ -51,6 +51,10 @@ p.footer {
     color: #6699cc;
 }
 
+.com {
+    color: #99ccff;
+}
+
 ol, ul {
     margin: 0;
     list-style-position: inside;
