@@ -5,7 +5,7 @@ var update = document.getElementById("update").innerHTML;
 var year = document.getElementById("year").innerHTML;
 var people = document.getElementById("people").innerHTML;
 
-var header = "<h1>" + title + "</h1><hr>";
+var header = "<h1 id='header_h1'>" + title + "</h1><hr>";
 var footer = "<hr><p class='footer' id='footer_p'>Last Updated: " + update + " | Copyright © " + year + " " + people + " All Rights Reserved.</p><p class='footer'><a id='footer_a1' href='https://quinn0823.github.io/' target='_blank'>Quinn-Web</a> | <a id='footer_a2' href='https://quinn0823.github.io'" + path + " target='_blank'>GitHub</a></p>";
 
 document.getElementById("header").innerHTML = header;
