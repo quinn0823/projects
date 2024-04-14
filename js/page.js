@@ -13,7 +13,7 @@ document.getElementById("footer").innerHTML = footer;
 var clipboard = new ClipboardJS('.copy_text');
 
 clipboard.on('success', function(e) {
-    alert(e.text + "has been copied.");
+    alert("\"" + e.text + "\" has been copied.");
 
     // console.info('Action:', e.action);
     // console.info('Text:', e.text);
